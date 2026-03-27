@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhadip Kumar - Portfolio</title>
+
+<!-- ✅ Font Awesome (FIXED POSITION) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- ✅ Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subhadip Kumar - Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    line-height:1.6;
+    color:#333;
+    margin:0;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    background:#fff;
+    padding:15px 0;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+/* SECTIONS */
+section{
+    padding:100px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+}
+/* ===== INSANE HERO ===== */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* animated gradient */
+    background: linear-gradient(270deg,#5f6dfc,#6a11cb,#2575fc,#ff6b6b);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+
+    color: #fff;
+    overflow: hidden;
+}
+
+/* gradient animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== HERO (FINAL LOCKED) ===== */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: linear-gradient(270deg,#5f6dfc,#6a11cb,#2575fc);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+
+    color: #fff;
+    overflow: hidden;
+}
+
+/* gradient animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== SOFT BACKGROUND GLOW ===== */
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.06);
+    filter: blur(100px);
+}
+
+.hero::before {
+    top: 10%;
+    left: 10%;
+}
+
+.hero::after {
+    bottom: 10%;
+    right: 10%;
+}
+
+/* ===== HERO CARD ===== */
+.hero-card {
+    position: relative;
+    z-index: 2;
+
+    background: rgba(255, 255, 255, 0.08);
+    padding: 38px 25px;
+    border-radius: 22px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+
+    max-width: 420px;
+    width: 100%;
+    margin: auto;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    animation: fadeUp 0.9s ease;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover interaction */
+.hero-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+/* entry animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== TEXT ===== */
+.hero h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 1.3; /* FIX */
+}
+
+.hero h1 span {
+    color: #ff6b6b;
+}
+
+.hero p {
+    margin: 12px 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    background: #ff6b6b;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}
+
+/* ===== CORNER SQUARES (FINAL PREMIUM) ===== */
+.corner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+
+    box-shadow: 0 0 6px rgba(255,255,255,0.12);
+    opacity: 0.6;
+
+    animation: fadeInCorner 1s ease;
+}
+
+/* positions */
+.corner-top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.corner-top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.corner-bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.corner-bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* subtle entry */
+@keyframes fadeInCorner {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+}
+/* ===== CORNERS (SUBTLE PREMIUM) ===== */
+.hero-card::before,
+.hero-card::after,
+.corner-lines::before,
+.corner-lines::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    border-radius: 10px;
+    animation: glowPulse 2.5s infinite alternate;
+}
+
+/* positions */
+.hero-card::before {
+    top: -8px;
+    left: -8px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hero-card::after {
+    bottom: -8px;
+    right: -8px;
+    border-left: none;
+    border-top: none;
+}
+
+.corner-lines::before {
+    top: -8px;
+    right: -8px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-lines::after {
+    bottom: -8px;
+    left: -8px;
+    border-right: none;
+    border-top: none;
+}
+
+/* subtle glow */
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 5px rgba(255,255,255,0.2);
+    }
+    to {
+        box-shadow: 0 0 12px rgba(255,255,255,0.4);
+    }
+}
+/* ===== CORNER DESIGN (ANIMATED) ===== */
+.hero-card::before,
+.hero-card::after,
+.corner-lines::before,
+.corner-lines::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 12px;
+    animation: glowPulse 2s infinite alternate;
+}
+
+/* positions */
+.hero-card::before {
+    top: -10px;
+    left: -10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hero-card::after {
+    bottom: -10px;
+    right: -10px;
+    border-left: none;
+    border-top: none;
+}
+
+.corner-lines::before {
+    top: -10px;
+    right: -10px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-lines::after {
+    bottom: -10px;
+    left: -10px;
+    border-right: none;
+    border-top: none;
+}
+
+/* glow animation */
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 4px rgba(255,255,255,0.2);
+    }
+    to {
+        box-shadow: 0 0 10px rgba(255,255,255,0.35);
+    }
+}
+/* ABOUT */
+.about-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-image img {
+    width:100%;
+    max-width:300px;
+    border-radius:50%;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+    border: 3px solid rgba(255,255,255,0.6);
+}
+
+/* SKILLS */
+.skill-bar{
+    margin-bottom:20px;
+}
+
+.bar{
+    height:10px;
+    background:#eee;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+.fill{
+    height:10px;
+    border-radius:5px;
+    transition: width 1s ease;
+}
+
+/* EXPERIENCE */
+.experience-box {
+    margin-top: 15px;   /* ✅ THIS IS THE FIX */
+}
+.experience-box:first-child {
+    margin-top: 0;
+}
+
+/* CONTACT */
+.contact-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#2c3e50;
+    color:white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .about-content,.contact-content{
+        grid-template-columns:1fr;
+    }
+}
+/* SECTION TITLE DESIGN */
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== ULTRA PREMIUM NAVBAR ===== */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+/* single line */
+.nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    overflow-x: auto;
+    padding: 5px;
+}
+
+/* hide scrollbar */
+.nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+/* pill buttons */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 14px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 25px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* hover */
+.nav-links a:hover {
+    background: linear-gradient(135deg,#3498db,#2ecc71);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* active */
+.nav-links a.active {
+    background: linear-gradient(135deg,#3498db,#2ecc71);
+    color: #fff;
+}
+
+/* spacing fix */
+body {
+    padding-top: 70px;
+}
+/* ===== HERO UPGRADE ===== */
+
+/* glow effect for name */
+.hero h1 span {
+    color: #ff6b6b;
+    text-shadow: none ;
+}
+.cert-item {
+    margin-bottom: 15px;
+}
+
+.cert-btn {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cert-btn:hover {
+    background: #eaeaea;
+}
+
+.cert-btn.active {
+    background: linear-gradient(135deg,#3498db,#2ecc71);
+    color: #fff;
+}
+
+.cert-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    background: #fafafa;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 0 15px;
+}
+
+.cert-content.open {
+    padding: 15px;
+}
+.cert-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cert-link:hover {
+    text-decoration: underline;
+}
+.cert-item {
+    transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-4px);
+}
+.ec-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.ec-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ec-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.ec-images img {
+    width: 100%;
+    height: 120px;          /* 🔥 makes them uniform */
+    object-fit: cover;      /* 🔥 crop nicely like gallery */
+    border-radius: 10px;
+    display: block;
+}
+/* SAME STYLE AS CERTIFICATION BUTTON */
+/* DEFAULT (same as certification look) */
+.ec-btn {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+
+    background: #f5f5f5;
+    color: #333;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    display: block;
+    text-align: left;
+}
+
+/* HOVER */
+.ec-btn:hover {
+    background: #e0e0e0;
+}
+
+/* ACTIVE (CLICKED = GREEN SAME AS ANALYTICS) */
+.ec-btn.active {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: #fff;
+}
+.section-box{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+/* ===== PHOTOGRAPHY GALLERY ===== */
+.activity-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.activity-images img {
+    width: 100%;
+    border-radius: 8px;
+}
+.cert-item:hover {
+    transform: translateY(-3px);
+}
+.contact-box,
+.contact-form-box {
+    margin-bottom: 15px;
+}
+.hero p {
+    line-height: 1.4;
+}
+.section-box {
+    animation: fadeUp 0.6s ease;
+}
+.ec-btn, .cert-btn {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.ec-btn:active, .cert-btn:active {
+    transform: scale(0.97);
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.nav-links {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="#home"class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#activities"
+              >Extra Curricular Activities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<div class="hero-card">
+    <span class="corner-lines"></span>
+        <h1>Hi, I'm <span>Subhadip Kumar</span></h1>
+        <p>IT Graduate | Marketing Enthusiast | Creative Thinker</p>
+        <a href="Subhadip_Kumar_CV.pdf" class="btn" download>
+            Download Resume
+        </a>
+    </div>
+
+</section>
+<!-- ABOUT -->
+<section id="about"class="reveal">
+    <h2 class="section-title">About Me</h2>
+    <div class="section-box">
+    <div class="about-content">
+        <div>
+       <p> Hello! I'm <strong>Subhadip Kumar</strong>, an IT graduate and former Associate Software Engineer at Tech Mahindra with experience in web development, SAP BI, and cloud technologies.</p>
+       <p>I am passionate about combining technology with business and currently preparing for an MBA while learning digital marketing.
+</p>
+        </div>
+
+        <div class="about-image">
+            <img src="portfolio.jpg" alt="Subhadip Kumar">
+        </div>
+    </div>
+</section>
+<!-- EXPERIENCE -->
+<section id="experience"class="reveal">
+    <h2 class="section-title">Work Experience</h2>
+<div class="section-box">
+    <div class="experience-box">
+        <h3>Associate Software Engineer</h3>
+        <p><strong>@Tech Mahindra</strong> </p>
+        <p><strong> (2022 - 2023) </strong> </p>
+
+        <ul>
+    <li>Worked as an Associate Software Engineer in an Agile team environment at Tech Mahindra.</li>
+
+    <li>Primarily involved in debugging, issue resolution, and supporting application maintenance activities.</li>
+
+    <li>Analyzed defects and collaborated with team members to identify root causes and implement fixes.</li>
+
+    <li>Assisted in improving application performance and stability through continuous monitoring and troubleshooting.</li>
+
+    <li>Gained practical exposure to web technologies, SAP BI tools, and cloud fundamentals.</li>
+
+    <li>Developed strong problem-solving, analytical thinking, and teamwork skills in a corporate environment.</li>
+
+    <li>Understood how IT systems support business operations and client requirements.</li>
+</ul>
+    </div>
+</section>
+<section id="project" class="reveal">
+    <h2 class="section-title">Project</h2>
+
+    <div class="section-box">
+
+        <div class="experience-box">
+            <h3>Online Catering System (Android Application)</h3>
+            <p><strong>Academic Project</strong></p>
+
+            <ul>
+                <li>Developed an Android-based application for ordering catering services.</li>
+
+                <li>Designed features such as menu browsing, order placement, and basic user interaction.</li>
+
+                <li>Worked on UI design and application flow to ensure a simple and user-friendly experience.</li>
+
+                <li>Gained hands-on experience in mobile application development and problem-solving.</li>
+
+                <li>Understood how digital platforms can streamline service-based businesses.</li>
+            </ul>
+
+            <p><i>Note: Developed as part of academic coursework.</i></p>
+        </div>
+
+    </div>
+</section>
+<!-- SKILLS -->
+<section id="skills"class="reveal">
+    <h2 class="section-title">Skills</h2>
+      <div class="section-box">
+          <div class="skill-bar">
+            <p>Web Development</p>
+            <div class="bar">
+                <div class="fill" style="width:85%;background:#3498db;"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <p>Google Analytics</p>
+            <div class="bar">
+                <div class="fill" style="width:60%;background:#f39c12;"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <p>Digital Marketing</p>
+            <div class="bar">
+                <div class="fill" style="width:85%;background:#2ecc71;"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <p>IT Fundamentals</p>
+            <div class="bar">
+                <div class="fill" style="width:80%;background:#9b59b6;"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <p>SQL</p>
+            <div class="bar">
+                <div class="fill" style="width:70%;background:#1abc9c;"></div>
+            </div>
+        </div>
+
+        <div class="skill-bar">
+            <p>Python</p>
+            <div class="bar">
+                <div class="fill" style="width:75%;background:#e74c3c;"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- CERTIFICATIONS -->
+<section id="certifications"class="reveal">
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="section-box">
+
+        <div class="cert-item">
+    <div class="cert-btn">Azure Fundamentals (AZ-900) ➜</div>
+    <div class="cert-content">
+        <p><i><strong>Microsoft:</strong></i></p>
+        <p>The Azure Fundamentals (AZ-900) is a beginner-level certification from Microsoft that validates foundational knowledge of cloud concepts, Azure services, security, privacy, compliance, and pricing</p>
+
+        <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification" 
+           target="_blank" class="cert-link">
+           🔗 View Certification Details
+        </a>
+    </div>
+</div>
+
+<div class="cert-item">
+    <div class="cert-btn">Web Development ➜</div>
+    <div class="cert-content">
+        <p><i><strong>YouAccel (Udemy):</strong></i></p>
+
+        <p>
+        Web development is the process of designing, building, and maintaining websites and web applications that function over the internet. 
+        It includes web design, content development, client-side and server-side scripting, and database management.
+        </p>
+
+        <a href="https://www.udemy.com/course/web-development-masterclass-complete-certificate-course/?srsltid=AfmBOopoKVrnAXMYVrL1gm40Z6X9zEGHVuG6wZrhAtYeUHk1iZmmU1D6"
+           target="_blank" class="cert-link">
+           🔗 View Course Details
+        </a>
+    </div>
+</div>
+        <div class="cert-item">
+    <div class="cert-btn">JavaScript ➜</div>
+    <div class="cert-content">
+        <p><i>Udemy</i></p>
+
+        <p>
+        JavaScript is a versatile programming language used to build dynamic and interactive web applications. 
+        It enables client-side functionality and is also widely used for server-side development, mobile apps, and modern frameworks.
+        </p>
+
+        <a href="https://www.udemy.com/share/10cfFd3@sDOQ5uLAupWVduEzmOBx6MmHWBSsAKUjfFH9FWApptMY6HEnDiShziVhoQXgDwh8/" 
+           target="_blank" class="cert-link">
+           🔗 View Course Details
+        </a>
+    </div>
+</div>
+<div class="cert-item">
+    <div class="cert-btn">Google Analytics ➜</div>
+    <div class="cert-content">
+        <p><i>Google Digital Academy (Skillshop)</i></p>
+
+        <p>
+        Google Analytics is a web analytics tool that tracks and reports website and app traffic. 
+        It uses tracking code to collect data on user behavior, traffic sources, and engagement, 
+        helping businesses optimize digital strategies and improve performance.
+        </p>
+
+        <a href="https://skillshop.docebosaas.com/learn/courses/14810/google-analytics-certification" 
+           target="_blank" class="cert-link">
+           🔗 View Tool Details
+        </a>
+    </div>
+</div>
+
+<div class="cert-item">
+    <div class="cert-btn">Digital Marketing ➜</div>
+    <div class="cert-content">
+        <p><i>HubSpot</i></p>
+
+        <p>
+        Digital marketing involves using online platforms such as social media, search engines, and email to promote products, 
+        build brand awareness, and engage with audiences. It enables targeted, measurable, and cost-effective marketing strategies 
+        with real-time global reach.
+        </p>
+
+        <a href="https://academy.hubspot.com/courses/digital-marketing" 
+           target="_blank" class="cert-link">
+           🔗 View Course Details
+        </a>
+    </div>
+</div>
+<div class="cert-item">
+    <div class="cert-btn">Microsoft Excel ➜</div>
+    <div class="cert-content">
+        <p><i>Simplilearn</i></p>
+
+        <p>
+        Microsoft Excel is a powerful spreadsheet application used to organize, analyze, and visualize data using rows, columns, and formulas. 
+        It enables users to create financial models, charts, and pivot tables to extract insights and support data-driven decision making.
+        </p>
+
+        <a href="https://www.simplilearn.com/learn-ms-excel-free-training-course-skillup" 
+           target="_blank" class="cert-link">
+           🔗 View Course Details
+        </a>
+    </div>
+</div>
+<div class="cert-item">
+    <div class="cert-btn">Amazon FBA Product Launch (Case Study) ➜</div>
+    <div class="cert-content">
+        <p><i><strong>Udemy:</strong></i></p>
+
+        <p>
+        Learned how to research profitable product ideas, find suppliers, import products, and sell them on Amazon using the FBA (Fulfilled by Amazon) model. 
+        The course follows a real case study approach, demonstrating step-by-step how to build and scale an e-commerce business.
+        </p>
+
+        <a href="https://www.udemy.com/course/million-dollar-case-study/" 
+           target="_blank" class="cert-link">
+           🔗 View Course Details
+        </a>
+    </div>
+</div>
+    </div>
+</section>
+<!-- EXTRA CURRICULAR -->
+<section id="activities"class="reveal">
+    <h2 class="section-title">Extra Curricular Activities</h2>
+
+    <div class="section-box">
+<div class="experience-box">
+    <div class="ec-btn" onclick="toggleBox(this)">
+        Photography ➜</div>
+
+    <div class="ec-content">
+        <p>
+            Passionate about capturing nature, landscapes, and real-life moments.
+            Focused on lighting, composition, and storytelling through visuals.
+        </p>
+
+        <div class="activity-images">
+            <img src="photo1.jpg">
+            <img src="photo2.jpg">
+            <img src="photo3.jpg">
+            <img src="photo4.jpg">
+            <img src="photo5.jpg">
+        </div>
+    </div>
+</div>
+        <div class="experience-box">
+            <div class="ec-btn" onclick="toggleBox(this)">Leadership through Cricket ➜</div>
+            <div class="ec-content">
+                <p>
+                Played as a wicketkeeper-opening batsman from 2009–2016 in school team and continued till 2020 in local team. 
+                Captained teams for several years, demonstrating leadership, teamwork, and decision-making skills.
+                </p>
+            </div>
+        </div>
+
+        <div class="experience-box" style="margin-top:15px;">
+            <div class="ec-btn" onclick="toggleBox(this)">Social Activities ➜</div>
+            <div class="ec-content">
+                <p>Participated in tree plantation drives and visited orphanages.</p>
+                <div class="ec-images">
+                    <img src="tree1.jpg">
+                    <img src="tree2.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-box" style="margin-top:15px;">
+            <div class="ec-btn" onclick="toggleBox(this)">College Events ➜</div>
+            <div class="ec-content">
+                <p>Participated in Treasure Hunt and Creative Writing Competition.</p>
+                <div class="ec-images">
+                    <img src="event1.jpg">
+                    <img src="event2.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-box" style="margin-top:15px;">
+            <div class="ec-btn" onclick="toggleBox(this)">Cultural Activities ➜</div>
+            <div class="ec-content">
+                <ul>
+                    <li>Senior Diploma in Fine Arts</li>
+                    <li>Drawing Competition Winner</li>
+                </ul>
+                <div class="ec-images">
+                    <img src="art1.jpg">
+                    <img src="art2.jpg">
+                    <img src="art3.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- CONTACT -->
+<section id="contact" style="padding:100px 20px;max-width:1100px;margin:auto;"class="reveal">
+    
+    <style>
+        .contact-wrapper {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+        }
+
+        .contact-box {
+            background:#fff;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-box h3 {
+            margin-bottom:15px;
+        }
+
+        .contact-box p {
+            margin-bottom:10px;
+            font-size:15px;
+        }
+
+        .contact-form-box {
+            background:#fff;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-form-box h3 {
+            margin-bottom:15px;
+        }
+
+        .contact-form-box input,
+        .contact-form-box textarea {
+            width:100%;
+            padding:10px;
+            margin-bottom:15px;
+            border:1px solid #ddd;
+            border-radius:6px;
+        }
+
+        .contact-form-box button {
+            background:#3498db;
+            color:#fff;
+            padding:10px;
+            border:none;
+            border-radius:6px;
+            width:100%;
+            cursor:pointer;
+        }
+
+        .contact-form-box button:hover {
+            background:#2980b9;
+        }
+
+        @media(max-width:768px){
+            .contact-wrapper{
+                grid-template-columns:1fr;
+            }
+        }
+.section-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.social-container {
+    margin-top: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+    padding: 8px 14px;
+    border-radius: 25px;
+    background: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-link i {
+    margin-right: 6px;
+}
+
+/* Instagram */
+.social-link.insta:hover {
+    background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    color: #fff;
+}
+
+/* LinkedIn */
+.social-link.linkedin:hover {
+    background: #0077b5;
+    color: #fff;
+}
+.email-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+.phone-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.contact-form-box {
+    margin-top: 30px;
+}
+    </style>
+
+    <h2 class="section-title">Contact</h2>
+
+<div class="contact-wrapper">
+
+    <!-- LEFT BOX -->
+    <div class="contact-box">
+        <h3>Get in Touch</h3>
+
+        <p>
+            <i class="fas fa-envelope" style="margin-right:10px;color:#3498db;"></i>
+            <a href="mailto:Kumarsubhadip8@gmail.com" class="email-link">
+                Kumarsubhadip8@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <i class="fas fa-phone" style="margin-right:10px;color:#3498db;"></i>
+            <a href="tel:+917076759810" class="phone-link">
+                +91 7076759810
+            </a>
+        </p>
+
+        <p>
+            <i class="fas fa-map-marker-alt" style="margin-right:10px;color:#3498db;"></i>
+            Kolkata, India
+        </p>
+
+        <div class="social-container">
+            <p style="margin-top:15px;"><strong>Connect with me in:</strong></p>
+
+            <a href="https://www.instagram.com/i_am_dip_07" target="_blank" class="social-link insta">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+
+            <a href="https://www.linkedin.com/in/subhadip-kumar-sk10" target="_blank" class="social-link linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div> <!-- ✅ THIS WAS MISSING -->
+
+    <!-- RIGHT BOX -->
+    <div class="contact-form-box">
+        <h3>Send Message</h3>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</div>
+</section>
+
+<footer>
+    <p>© 2026 Subhadip Kumar</p>
+</footer>
+<script>
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+    link.addEventListener("click", function(){
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+</script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappMessage = `Hi, I am ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+    let phoneNumber = "917076759810";
+
+    let url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    window.open(url, "_blank");
+});
+</script>
+<script>
+window.addEventListener("scroll", () => {
+    let sections = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll(".nav-links a");
+
+    let current = "";
+
+    sections.forEach(section => {
+        let sectionTop = section.offsetTop - 100;
+        let sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+<script>
+document.querySelectorAll(".cert-btn").forEach(button => {
+    button.addEventListener("click", function () {
+
+        const content = this.nextElementSibling;
+
+        const isOpen = content.style.maxHeight;
+
+        document.querySelectorAll(".cert-content").forEach(c => {
+            c.style.maxHeight = null;
+            c.classList.remove("open");
+        });
+
+        document.querySelectorAll(".cert-btn").forEach(b => {
+            b.classList.remove("active");
+        });
+
+        if (!isOpen) {
+            content.classList.add("open");
+            content.style.maxHeight = content.scrollHeight + "px";
+            this.classList.add("active");
+        }
+
+    });
+});
+</script>
+<script>
+function toggleBox(el) {
+    let content = el.nextElementSibling;
+
+    let isOpen = content.style.display === "block";
+
+    // close all first
+    document.querySelectorAll(".ec-content").forEach(c => {
+        c.style.display = "none";
+    });
+
+    document.querySelectorAll(".ec-btn").forEach(b => {
+        b.classList.remove("active");
+    });
+
+    // if it was CLOSED → open it
+    if (!isOpen) {
+        content.style.display = "block";
+        el.classList.add("active");
+    }
+}
+</script>
+<script>
+window.addEventListener("scroll", () => {
+
+    let sections = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll(".nav-links a");
+
+    let current = "";
+
+    sections.forEach(section => {
+        let sectionTop = section.offsetTop - 200;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+
+            link.scrollIntoView({
+                behavior: "smooth",
+                inline: "center"
+            });
+        }
+    });
+
+    // reveal animation
+    document.querySelectorAll(".reveal").forEach(el => {
+        let top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+
+});
+</script>
+</body>
+</html>
