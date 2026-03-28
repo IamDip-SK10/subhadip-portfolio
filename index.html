@@ -935,9 +935,21 @@ nav {
             cursor:pointer;
         }
 
-        .contact-form-box button:hover {
-            background:#2980b9;
-        }
+        .contact-form-box button {
+    background: linear-gradient(135deg,#3498db,#2ecc71);
+    color:#fff;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    width:100%;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
 
         @media(max-width:768px){
             .contact-wrapper{
