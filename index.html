@@ -1088,30 +1088,6 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 });
 </script>
 <script>
-window.addEventListener("scroll", () => {
-    let sections = document.querySelectorAll("section");
-    let navLinks = document.querySelectorAll(".nav-links a");
-
-    let current = "";
-
-    sections.forEach(section => {
-        let sectionTop = section.offsetTop - 100;
-        let sectionHeight = section.clientHeight;
-
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-});
-</script>
-<script>
 document.querySelectorAll(".cert-btn").forEach(button => {
     button.addEventListener("click", function () {
 
@@ -1183,8 +1159,6 @@ window.addEventListener("scroll", () => {
             });
         }
     });
-
-    // reveal animation
     document.querySelectorAll(".reveal").forEach(el => {
         let top = el.getBoundingClientRect().top;
         if (top < window.innerHeight - 100) {
