@@ -540,7 +540,7 @@ nav {
 
 <body>
 
-<!-- NAV -->
+<-- NAV -->
 <nav>
     <div class="nav-container">
         <ul class="nav-links">
@@ -557,7 +557,7 @@ nav {
     </div>
 </nav>
 
-<!-- HERO -->
+<-- HERO -->
 <section id="home" class="hero">
 <div class="hero-card">
     <span class="corner-lines"></span>
@@ -569,7 +569,7 @@ nav {
     </div>
 
 </section>
-<!-- ABOUT -->
+<-- ABOUT -->
 <section id="about"class="reveal">
     <h2 class="section-title">About Me</h2>
     <div class="section-box">
@@ -585,7 +585,7 @@ nav {
         </div>
     </div>
 </section>
-<!-- EXPERIENCE -->
+<-- EXPERIENCE -->
 <section id="experience"class="reveal">
     <h2 class="section-title">Work Experience</h2>
 <div class="section-box">
@@ -637,7 +637,7 @@ nav {
 
     </div>
 </section>
-<!-- SKILLS -->
+<-- SKILLS -->
 <section id="skills"class="reveal">
     <h2 class="section-title">Skills</h2>
       <div class="section-box">
@@ -685,7 +685,7 @@ nav {
 
     </div>
 </section>
-<!-- CERTIFICATIONS -->
+<-- CERTIFICATIONS -->
 <section id="certifications"class="reveal">
     <h2 class="section-title">Certifications</h2>
 
@@ -805,7 +805,7 @@ nav {
 </div>
     </div>
 </section>
-<!-- EXTRA CURRICULAR -->
+<-- EXTRA CURRICULAR -->
 <section id="activities"class="reveal">
     <h2 class="section-title">Extra Curricular Activities</h2>
 
@@ -878,7 +878,7 @@ nav {
 
     </div>
 </section>
-<!-- CONTACT -->
+<-- CONTACT -->
 <section id="contact" style="padding:100px 20px;max-width:1100px;margin:auto;"class="reveal">
     
     <style>
@@ -1039,7 +1039,7 @@ nav {
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </div>
-    </div> <!-- ✅ THIS WAS MISSING -->
+    </div>
 
     <!-- RIGHT BOX -->
     <div class="contact-form-box">
@@ -1141,8 +1141,6 @@ function toggleBox(el) {
     let content = el.nextElementSibling;
 
     let isOpen = content.style.display === "block";
-
-    // close all first
     document.querySelectorAll(".ec-content").forEach(c => {
         c.style.display = "none";
     });
@@ -1150,8 +1148,6 @@ function toggleBox(el) {
     document.querySelectorAll(".ec-btn").forEach(b => {
         b.classList.remove("active");
     });
-
-    // if it was CLOSED → open it
     if (!isOpen) {
         content.style.display = "block";
         el.classList.add("active");
