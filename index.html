@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- ✅ Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Subhadip Kumar - Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
@@ -13,16 +19,52 @@ body{
     font-family:'Poppins',sans-serif;
     line-height:1.6;
     color:#333;
-    padding-top: 70px;
     margin:0;
 }
-/* Sections */
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    background:#fff;
+    padding:15px 0;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+/* SECTIONS */
 section{
     padding:100px 20px;
     max-width:1100px;
     margin:auto;
 }
-/* HERO */
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+}
+/* ===== HERO (FINAL LOCKED) ===== */
 .hero {
     position: relative;
     min-height: 80vh;
@@ -39,6 +81,7 @@ section{
     color: #fff;
     overflow: hidden;
 }
+
 /* gradient animation */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
@@ -46,7 +89,7 @@ section{
     100% { background-position: 0% 50%; }
 }
 
-/* Background Glow */
+/* ===== SOFT BACKGROUND GLOW ===== */
 .hero::before,
 .hero::after {
     content: "";
@@ -67,7 +110,7 @@ section{
     right: 10%;
 }
 
-/* Hero Card */
+/* ===== HERO CARD ===== */
 .hero-card {
     position: relative;
     z-index: 2;
@@ -92,13 +135,13 @@ section{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover interaction */
+/* hover interaction */
 .hero-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 25px 60px rgba(0,0,0,0.35);
 }
 
-/* Entry animation */
+/* entry animation */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -110,17 +153,15 @@ section{
     }
 }
 
-/* Text */
+/* ===== TEXT ===== */
 .hero h1 {
     font-size: 2.3rem;
     font-weight: 600;
     line-height: 1.3; /* FIX */
 }
 
-/* glow effect for name */
 .hero h1 span {
     color: #ff6b6b;
-    text-shadow: none ;
 }
 
 .hero p {
@@ -129,7 +170,7 @@ section{
     opacity: 0.9;
 }
 
-/* Button */
+/* ===== BUTTON ===== */
 .btn {
     background: #ff6b6b;
     padding: 12px 25px;
@@ -146,7 +187,7 @@ section{
     transform: translateY(-2px);
 }
 
-/* CORNER SQUARES */
+/* ===== CORNER SQUARES (FINAL PREMIUM) ===== */
 .corner {
     position: absolute;
     width: 60px;
@@ -192,7 +233,59 @@ section{
         transform: scale(1);
     }
 }
-/* Corner Design */
+/* ===== CORNERS (SUBTLE PREMIUM) ===== */
+.hero-card::before,
+.hero-card::after,
+.corner-lines::before,
+.corner-lines::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    border-radius: 10px;
+    animation: glowPulse 2.5s infinite alternate;
+}
+
+/* positions */
+.hero-card::before {
+    top: -8px;
+    left: -8px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hero-card::after {
+    bottom: -8px;
+    right: -8px;
+    border-left: none;
+    border-top: none;
+}
+
+.corner-lines::before {
+    top: -8px;
+    right: -8px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner-lines::after {
+    bottom: -8px;
+    left: -8px;
+    border-right: none;
+    border-top: none;
+}
+
+/* subtle glow */
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 5px rgba(255,255,255,0.2);
+    }
+    to {
+        box-shadow: 0 0 12px rgba(255,255,255,0.4);
+    }
+}
+/* ===== CORNER DESIGN (ANIMATED) ===== */
 .hero-card::before,
 .hero-card::after,
 .corner-lines::before,
@@ -280,7 +373,7 @@ section{
 
 /* EXPERIENCE */
 .experience-box {
-    margin-top: 15px;
+    margin-top: 15px;   /* ✅ THIS IS THE FIX */
 }
 .experience-box:first-child {
     margin-top: 0;
@@ -313,7 +406,7 @@ footer{
         grid-template-columns:1fr;
     }
 }
-/* SECTION TITLE */
+/* SECTION TITLE DESIGN */
 .section-title {
     text-align: center;
     font-size: 2.3rem;
@@ -333,7 +426,7 @@ footer{
     border-radius: 2px;
 }
 
-/* NAVBAR */
+/* ===== ULTRA PREMIUM NAVBAR ===== */
 
 nav {
     position: fixed;
@@ -391,6 +484,18 @@ nav {
 .nav-links a.active {
     background: linear-gradient(135deg,#3498db,#2ecc71);
     color: #fff;
+}
+
+/* spacing fix */
+body {
+    padding-top: 70px;
+}
+/* ===== HERO UPGRADE ===== */
+
+/* glow effect for name */
+.hero h1 span {
+    color: #ff6b6b;
+    text-shadow: none ;
 }
 .cert-item {
     margin-bottom: 15px;
@@ -452,6 +557,13 @@ nav {
     display: none;
     margin-top: 10px;
 }
+
+.ec-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
 .ec-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -461,11 +573,13 @@ nav {
 
 .ec-images img {
     width: 100%;
-    height: 120px;          
-    object-fit: cover;     
+    height: 120px;          /* 🔥 makes them uniform */
+    object-fit: cover;      /* 🔥 crop nicely like gallery */
     border-radius: 10px;
     display: block;
 }
+/* SAME STYLE AS CERTIFICATION BUTTON */
+/* DEFAULT (same as certification look) */
 .ec-btn {
     width: 100%;
     padding: 14px 18px;
@@ -482,20 +596,18 @@ nav {
     display: block;
     text-align: left;
 }
+
+/* HOVER */
 .ec-btn:hover {
     background: #e0e0e0;
 }
+
+/* ACTIVE (CLICKED = GREEN SAME AS ANALYTICS) */
 .ec-btn.active {
     background: linear-gradient(135deg, #3498db, #2ecc71);
     color: #fff;
 }
-.section-box{
-    background:#fff;
-    padding:30px
-    border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.08);
-    margin-top:20px
-}
+/* ===== PHOTOGRAPHY GALLERY ===== */
 .activity-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -507,15 +619,15 @@ nav {
     width: 100%;
     border-radius: 8px;
 }
+.cert-item:hover {
+    transform: translateY(-3px);
+}
 .contact-box,
 .contact-form-box {
     margin-bottom: 15px;
 }
 .hero p {
     line-height: 1.4;
-}
-.section-box {
-    animation: fadeUp 0.6s ease;
 }
 .ec-btn, .cert-btn {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -535,128 +647,6 @@ nav {
 }
 .nav-links {
     scroll-behavior: smooth;
-}
-        .contact-wrapper {
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:40px;
-        }
-
-        .contact-box {
-            background:#fff;
-            padding:25px;
-            border-radius:12px;
-            box-shadow:0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .contact-box h3 {
-            margin-bottom:15px;
-        }
-
-        .contact-box p {
-            margin-bottom:10px;
-            font-size:15px;
-        }
-
-        .contact-form-box {
-            background:#fff;
-            padding:25px;
-            border-radius:12px;
-            box-shadow:0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .contact-form-box h3 {
-            margin-bottom:15px;
-        }
-
-        .contact-form-box input,
-        .contact-form-box textarea {
-            width:100%;
-            padding:10px;
-            margin-bottom:15px;
-            border:1px solid #ddd;
-            border-radius:6px;
-        }
-
-        .contact-form-box button {
-            background:#3498db;
-            color:#fff;
-            padding:10px;
-            border:none;
-            border-radius:6px;
-            width:100%;
-            cursor:pointer;
-        }
-
-        .contact-form-box button {
-    background: linear-gradient(135deg,#3498db,#2ecc71);
-    color:#fff;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    width:100%;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.contact-form-box button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-        @media(max-width:768px){
-            .contact-wrapper{
-                grid-template-columns:1fr;
-            }
-        }
-.social-container {
-    margin-top: 10px;
-}
-
-.social-link {
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 8px;
-    padding: 8px 14px;
-    border-radius: 25px;
-    background: #f1f1f1;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.social-link i {
-    margin-right: 6px;
-}
-
-/* Instagram */
-.social-link.insta:hover {
-    background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
-    color: #fff;
-}
-
-/* LinkedIn */
-.social-link.linkedin:hover {
-    background: #0077b5;
-    color: #fff;
-}
-.email-link {
-    color: #333;
-    text-decoration: none;
-}
-
-.email-link:hover {
-    color: #3498db;
-    text-decoration: underline;
-}
-.phone-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-.contact-form-box {
-    margin-top: 30px;
 }
 </style>
 </head>
@@ -685,7 +675,7 @@ nav {
 <div class="hero-card">
     <span class="corner-lines"></span>
         <h1>Hi, I'm <span>Subhadip Kumar</span></h1>
-        <p>IT Graduate | Marketing Enthusiast | Creative Thinker</p>
+        <p>IT Graduate | Data Analytics & Marketing Enthusiast | Bridging Technology with Business</p>
         <a href="Subhadip_Kumar_CV.pdf" class="btn" download>
             Download Resume
         </a>
@@ -698,8 +688,9 @@ nav {
     <div class="section-box">
     <div class="about-content">
         <div>
-       <p> Hello! I'm <strong>Subhadip Kumar</strong>, an IT graduate and former Associate Software Engineer at Tech Mahindra with experience in web development, SAP BI, and cloud technologies.</p>
-       <p>I am passionate about combining technology with business and currently preparing for an MBA while learning digital marketing.
+       <p> Hello! I'm <strong>Subhadip Kumar</strong>, an IT graduate and former Associate Software Engineer at Tech Mahindra.</p>
+       <p>I have experience in web development, SAP BI, and cloud technologies, where I worked on solving real-world application issues and improving system performance.</p>
+       <p>I am passionate about combining technology with business and currently preparing for an MBA while building skills in data analytics and digital marketing.
 </p>
         </div>
 
@@ -718,19 +709,17 @@ nav {
         <p><strong> (2022 - 2023) </strong> </p>
 
         <ul>
-    <li>Worked as an Associate Software Engineer in an Agile team environment at Tech Mahindra.</li>
+<li>Worked as an Associate Software Engineer in an Agile team at Tech Mahindra, contributing to application maintenance and issue resolution for enterprise systems.</li>
 
-    <li>Primarily involved in debugging, issue resolution, and supporting application maintenance activities.</li>
+<li>Analyzed and resolved application defects by identifying root causes and implementing effective solutions in collaboration with cross-functional teams.</li>
 
-    <li>Analyzed defects and collaborated with team members to identify root causes and implement fixes.</li>
+<li>Enhanced application performance and stability through continuous monitoring, troubleshooting, and proactive issue handling.</li>
 
-    <li>Assisted in improving application performance and stability through continuous monitoring and troubleshooting.</li>
+<li>Gained hands-on experience in web technologies, SAP BI tools, and cloud fundamentals while working on real-world business applications.</li>
 
-    <li>Gained practical exposure to web technologies, SAP BI tools, and cloud fundamentals.</li>
+<li>Strengthened problem-solving and analytical thinking skills by handling production-level issues in a corporate environment.</li>
 
-    <li>Developed strong problem-solving, analytical thinking, and teamwork skills in a corporate environment.</li>
-
-    <li>Understood how IT systems support business operations and client requirements.</li>
+<li>Developed an understanding of how IT systems support business operations and client requirements in large-scale organizations.</li>
 </ul>
     </div>
 </section>
@@ -757,8 +746,51 @@ nav {
 
             <p><i>Note: Developed as part of academic coursework.</i></p>
         </div>
+      <div class="experience-box">
+            <h3>BMI & Calorie Calculator Website</h3>
+            <p><strong>Personal Project</strong></p>
 
+            <ul>
+                <li>Developed a responsive web application to calculate BMI and daily calorie requirements.</li>
+                <li>Implemented dynamic user input handling using JavaScript for real-time results.</li>
+                <li>Designed a clean and interactive UI using HTML, CSS, and modern styling techniques.</li>
+                <li>Applied health-based formulas to compute BMI and calorie needs.</li>
+                <li>Demonstrates ability to convert real-world problems into digital solutions.</li>
+            </ul>
+
+            <a href="https://fitwithsubha.netlify.app/" target="_blank" class="cert-link">
+                🔗 View Live Project →
+            </a>
+
+            <p style="margin-top:8px;font-size:13px;color:#777;">
+                Built independently to solve real-world fitness tracking problems.
+            </p>
+        </div>
+        <div class="experience-box">
+    <h3>Loan Decision AI System (FinTech Project)</h3>
+    <p><strong>Personal Project</strong></p>
+
+    <ul>
+        <li>Developed a Hybrid Loan Decision System combining Machine Learning with real-world banking policies.</li>
+        <li>Implemented AI-based prediction model to estimate loan approval probability using financial data.</li>
+        <li>Designed rule-based governance layer (Credit Score, DTI, LTV) to override risky approvals.</li>
+        <li>Built Loan-to-Value (LTV) and collateral-based approval logic used in real banking systems.</li>
+        <li>Created a “What-If Simulation Engine” to guide users on improving approval chances dynamically.</li>
+        <li>Integrated EMI calculator and loan eligibility estimator using standard financial formulas.</li>
+        <li>Developed interactive analytics dashboard for risk visualization and decision explanation.</li>
+        <li>Designed end-to-end user experience using Streamlit with modern UI (Glassmorphism design).</li>
+    </ul>
+    <a href="https://ai-loan-decision-dip.streamlit.app/"
+    target="_blank" class="cert-link">
+                      🔗 View Live Project →
+    </a>
+
+    <p style="margin-top:8px;font-size:13px;color:#777;">
+        Combines AI + Banking Logic + Financial Advisory to simulate real-world loan underwriting systems.
+    </p>
+</div>
     </div>
+    
 </section>
 <!-- SKILLS -->
 <section id="skills"class="reveal">
@@ -805,7 +837,12 @@ nav {
                 <div class="fill" style="width:75%;background:#e74c3c;"></div>
             </div>
         </div>
-
+        <div class="skill-bar">
+    <p>SAP BI / Business Intelligence</p>
+    <div class="bar">
+        <div class="fill" style="width:65%;background:#34495e;"></div>
+    </div>
+</div>
     </div>
 </section>
 <!-- CERTIFICATIONS -->
@@ -872,11 +909,30 @@ nav {
 
         <a href="https://skillshop.docebosaas.com/learn/courses/14810/google-analytics-certification" 
            target="_blank" class="cert-link">
-           🔗 View Tool Details
+           🔗 View Details
         </a>
     </div>
 </div>
+<div class="cert-item">
+    <div class="cert-btn">Data Analyst – Big 4 Ready ➜</div>
+    <div class="cert-content">
+        <p><i>Oneroadmap</i></p>
 
+        <p>
+        Completed a job-ready Data Analyst certification focused on real-world business analytics. 
+        Learned data cleaning, analysis, and visualization using Excel, SQL, and Python.
+        Covered key concepts such as data-driven decision making, KPI tracking, and business insights.
+        </p>
+
+        <p>
+        Designed to prepare candidates for analytics roles in consulting firms (Big 4) and corporate environments.
+        </p>
+      <a href="  https://www.oneroadmap.io/skills/data-analyst-big4/certificate/CERT-9DA4CFB5 "
+      target="_blank" class="cert-link">
+           🔗 View Details
+        </a>
+    </div>
+</div>
 <div class="cert-item">
     <div class="cert-btn">Digital Marketing ➜</div>
     <div class="cert-content">
@@ -890,7 +946,7 @@ nav {
 
         <a href="https://academy.hubspot.com/courses/digital-marketing" 
            target="_blank" class="cert-link">
-           🔗 View Course Details
+           🔗 View certification Details
         </a>
     </div>
 </div>
@@ -992,9 +1048,9 @@ nav {
                     <li>Drawing Competition Winner</li>
                 </ul>
                 <div class="ec-images">
-                    <img src="Art1.jpg">
-                    <img src="Art2.jpg">
-                    <img src="Art3.jpg">
+                    <img src="art1.jpg">
+                    <img src="art2.jpg">
+                    <img src="art3.jpg">
                 </div>
             </div>
         </div>
@@ -1002,8 +1058,131 @@ nav {
     </div>
 </section>
 <!-- CONTACT -->
-<section id="contact" style="padding:100px 20px;max-width:1100px;margin:auto;"class="reveal">     
+<section id="contact" style="padding:100px 20px;max-width:1100px;margin:auto;"class="reveal">
+    
+    <style>
+        .contact-wrapper {
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+        }
+
+        .contact-box {
+            background:#fff;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-box h3 {
+            margin-bottom:15px;
+        }
+
+        .contact-box p {
+            margin-bottom:10px;
+            font-size:15px;
+        }
+
+        .contact-form-box {
+            background:#fff;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-form-box h3 {
+            margin-bottom:15px;
+        }
+
+        .contact-form-box input,
+        .contact-form-box textarea {
+            width:100%;
+            padding:10px;
+            margin-bottom:15px;
+            border:1px solid #ddd;
+            border-radius:6px;
+        }
+
+        .contact-form-box button {
+            background:#3498db;
+            color:#fff;
+            padding:10px;
+            border:none;
+            border-radius:6px;
+            width:100%;
+            cursor:pointer;
+        }
+
+        .contact-form-box button:hover {
+            background:#2980b9;
+        }
+
+        @media(max-width:768px){
+            .contact-wrapper{
+                grid-template-columns:1fr;
+            }
+        }
+.section-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    animation: fadeUp 0.6s ease;
+}
+.social-container {
+    margin-top: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+    padding: 8px 14px;
+    border-radius: 25px;
+    background: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-link i {
+    margin-right: 6px;
+}
+
+/* Instagram */
+.social-link.insta:hover {
+    background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    color: #fff;
+}
+
+/* LinkedIn */
+.social-link.linkedin:hover {
+    background: #0077b5;
+    color: #fff;
+}
+.email-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+.phone-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.contact-form-box {
+    margin-top: 30px;
+}
+    </style>
+
     <h2 class="section-title">Contact</h2>
+
 <div class="contact-wrapper">
 
     <!-- LEFT BOX -->
@@ -1040,7 +1219,7 @@ nav {
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </div>
-    </div>
+    </div> <!-- ✅ THIS WAS MISSING -->
 
     <!-- RIGHT BOX -->
     <div class="contact-form-box">
@@ -1118,6 +1297,8 @@ function toggleBox(el) {
     let content = el.nextElementSibling;
 
     let isOpen = content.style.display === "block";
+
+    // close all first
     document.querySelectorAll(".ec-content").forEach(c => {
         c.style.display = "none";
     });
@@ -1125,6 +1306,8 @@ function toggleBox(el) {
     document.querySelectorAll(".ec-btn").forEach(b => {
         b.classList.remove("active");
     });
+
+    // if it was CLOSED → open it
     if (!isOpen) {
         content.style.display = "block";
         el.classList.add("active");
@@ -1159,6 +1342,8 @@ window.addEventListener("scroll", () => {
             });
         }
     });
+
+    // reveal animation
     document.querySelectorAll(".reveal").forEach(el => {
         let top = el.getBoundingClientRect().top;
         if (top < window.innerHeight - 100) {
