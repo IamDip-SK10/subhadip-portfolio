@@ -648,6 +648,86 @@ body {
 .nav-links {
     scroll-behavior: smooth;
 }
+/* ===== PROJECT ACCORDION ===== */
+
+.project-item{
+    margin-bottom:15px;
+    transition:0.3s;
+}
+
+.project-item:hover{
+    transform:translateY(-3px);
+}
+
+.project-btn{
+    width:100%;
+    padding:16px 18px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+
+    background:#f5f5f5;
+    color:#333;
+
+    cursor:pointer;
+    transition:0.3s;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.project-btn:hover{
+    background:#eaeaea;
+}
+
+.project-btn.active{
+    background:linear-gradient(135deg,#3498db,#2ecc71);
+    color:#fff;
+}
+
+.project-content{
+    max-height:0;
+    overflow:hidden;
+
+    transition:max-height 0.35s ease;
+
+    background:#fafafa;
+
+    border-radius:12px;
+
+    margin-top:6px;
+
+    padding:0 18px;
+}
+
+.project-content.open{
+    padding:18px;
+}
+
+.project-content ul{
+    padding-left:18px;
+}
+
+.project-tags{
+    margin-top:10px;
+}
+
+.project-tags span{
+    display:inline-block;
+    background:#e9f3ff;
+    color:#3498db;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    margin:4px;
+}
 </style>
 </head>
 
@@ -724,73 +804,209 @@ body {
     </div>
 </section>
 <section id="project" class="reveal">
-    <h2 class="section-title">Project</h2>
+
+    <h2 class="section-title">Projects</h2>
 
     <div class="section-box">
 
-        <div class="experience-box">
-            <h3>Online Catering System (Android Application)</h3>
-            <p><strong>Academic Project</strong></p>
+        <!-- PROJECT 1 -->
+       <div class="project-item">
 
-            <ul>
-                <li>Developed an Android-based application for ordering catering services.</li>
-
-                <li>Designed features such as menu browsing, order placement, and basic user interaction.</li>
-
-                <li>Worked on UI design and application flow to ensure a simple and user-friendly experience.</li>
-
-                <li>Gained hands-on experience in mobile application development and problem-solving.</li>
-
-                <li>Understood how digital platforms can streamline service-based businesses.</li>
-            </ul>
-
-            <p><i>Note: Developed as part of academic coursework.</i></p>
-        </div>
-      <div class="experience-box">
-            <h3>BMI & Calorie Calculator Website</h3>
-            <p><strong>Personal Project</strong></p>
-
-            <ul>
-                <li>Developed a responsive web application to calculate BMI and daily calorie requirements.</li>
-                <li>Implemented dynamic user input handling using JavaScript for real-time results.</li>
-                <li>Designed a clean and interactive UI using HTML, CSS, and modern styling techniques.</li>
-                <li>Applied health-based formulas to compute BMI and calorie needs.</li>
-                <li>Demonstrates ability to convert real-world problems into digital solutions.</li>
-            </ul>
-
-            <a href="https://fitwithsubha.netlify.app/" target="_blank" class="cert-link">
-                🔗 View Live Project →
-            </a>
-
-            <p style="margin-top:8px;font-size:13px;color:#777;">
-                Built independently to solve real-world fitness tracking problems.
-            </p>
-        </div>
-        <div class="experience-box">
-    <h3>Loan Decision AI System (FinTech Project)</h3>
-    <p><strong>Personal Project</strong></p>
-
-    <ul>
-        <li>Developed a Hybrid Loan Decision System combining Machine Learning with real-world banking policies.</li>
-        <li>Implemented AI-based prediction model to estimate loan approval probability using financial data.</li>
-        <li>Designed rule-based governance layer (Credit Score, DTI, LTV) to override risky approvals.</li>
-        <li>Built Loan-to-Value (LTV) and collateral-based approval logic used in real banking systems.</li>
-        <li>Created a “What-If Simulation Engine” to guide users on improving approval chances dynamically.</li>
-        <li>Integrated EMI calculator and loan eligibility estimator using standard financial formulas.</li>
-        <li>Developed interactive analytics dashboard for risk visualization and decision explanation.</li>
-        <li>Designed end-to-end user experience using Streamlit with modern UI (Glassmorphism design).</li>
-    </ul>
-    <a href="https://ai-loan-decision-dip.streamlit.app/"
-    target="_blank" class="cert-link">
-                      🔗 View Live Project →
-    </a>
-
-    <p style="margin-top:8px;font-size:13px;color:#777;">
-        Combines AI + Banking Logic + Financial Advisory to simulate real-world loan underwriting systems.
-    </p>
-</div>
+    <div class="project-btn">
+        Loan Decision AI System
+        <span>➜</span>
     </div>
-    
+
+    <div class="project-content">
+
+        <p><strong>Personal Project • AI-Powered FinTech Underwriting Platform</strong></p>
+
+        <ul>
+            <li>Built an ML-based loan approval prediction engine using applicant financial data and risk profiling.</li>
+
+            <li>Implemented real-world banking governance logic using Credit Score, DTI (Debt-to-Income) and LTV (Loan-to-Value) risk evaluation.</li>
+
+            <li>Developed EMI calculator, affordability analyzer and dynamic loan eligibility estimation system.</li>
+
+            <li>Created What-If Simulation Engine to recalculate approval probability based on income, loan amount and repayment changes.</li>
+
+            <li>Designed interactive multi-page Streamlit dashboard with risk analytics, approval insights and decision transparency visualization.</li>
+
+            <li>Integrated enterprise-style PDF report generation including loan evaluation summary, governance insights and financial risk analysis.</li>
+
+            <li>Built AI-assisted recommendation layer providing smart approval guidance and safe loan limit suggestions.</li>
+        </ul>
+
+        <div class="project-tags">
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Streamlit</span>
+            <span>Scikit-Learn</span>
+            <span>Financial Analytics</span>
+            <span>AI</span>
+            <span>FinTech</span>
+        </div>
+        <a href=https://ai-loan-decision-dip.streamlit.app
+                   target="_blank" 
+                   class="cert-link">
+
+                   🔗 View Live Project →
+
+                </a>
+        <p style="margin-top:10px;font-size:13px;color:#777;">
+            Simulates real-world banking underwriting workflows by combining Machine Learning, Financial Risk Governance, Analytics and AI-based Financial Advisory systems.
+        </p>
+
+    </div>
+
+</div>
+
+        <!-- PROJECT 2 -->
+        <!-- PROJECT 2 -->
+<div class="project-item">
+
+    <div class="project-btn">
+        Smart Fitness & Health Tracking Platform
+        <span>➜</span>
+    </div>
+
+    <div class="project-content">
+
+        <p><strong>Personal Project • Fitness Web Platform</strong></p>
+
+        <ul>
+            <li>Built responsive fitness tracking and calorie management web platform.</li>
+
+            <li>Implemented BMI, BMR, calorie deficit, and personalized fitness calculations.</li>
+
+            <li>Developed smart fitness planning system based on user goals and activity levels.</li>
+
+            <li>Designed modern mobile-friendly UI with interactive user experience.</li>
+
+            <li>Integrated progress tracking, AI-style recommendations, and motivational transformation journey.</li>
+        </ul>
+
+        <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Responsive UI</span>
+            <span>Fitness Tech</span>
+        </div>
+
+        <a href="https://fitwithsubha.netlify.app/" 
+           target="_blank" 
+           class="cert-link">
+
+           🔗 View Live Project →
+
+        </a>
+
+        <p style="margin-top:10px;font-size:13px;color:#777;">
+            Built independently to combine fitness tracking, calorie planning, and motivational guidance into a single digital platform.
+        </p>
+
+    </div>
+
+</div>
+      <!-- PROJECT 3 -->
+<div class="project-item">
+
+    <div class="project-btn">
+        BFSI Audit & Intelligence Platform
+        <span>➜</span>
+    </div>
+
+    <div class="project-content">
+
+        <p><strong>Personal Project • BFSI Strategy & Technology Platform</strong></p>
+
+        <ul>
+
+            <li>Designed and developed a multi-page BFSI audit simulation platform focused on banking accessibility, ESG compliance, and AI fraud defense.</li>
+
+            <li>Built interactive audit modules for Silver Economy banking UX, ESG/BRSR compliance analysis, and AI-powered fraud risk assessment.</li>
+
+            <li>Implemented dynamic scoring systems, transaction anomaly simulations, and consulting-style risk reporting using JavaScript logic and real-world BFSI concepts.</li>
+
+            <li>Created executive-style dashboards, case studies, animated analytics, and responsive UI inspired by modern fintech and consulting platforms.</li>
+
+            <li>Integrated RBI, SEBI, WCAG 2.2, AI TRiSM, and digital banking concepts to simulate real-world financial risk and compliance scenarios.</li>
+
+        </ul>
+
+        <div class="project-tags">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>BFSI</span>
+            <span>ESG</span>
+            <span>AI Fraud</span>
+            <span>Responsive UI</span>
+            <span>FinTech</span>
+
+        </div>
+
+        <a href="https://finwithdip.netlify.app"
+           target="_blank"
+           class="cert-link">
+
+           🔗 View Live Project →
+
+        </a>
+
+        <p style="margin-top:10px;font-size:13px;color:#777;">
+
+            Built independently to explore emerging trends in digital banking, financial risk management, accessibility, ESG compliance, and AI-driven fraud defense through an interactive consulting-style platform.
+
+        </p>
+
+    </div>
+
+</div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-item">
+
+            <div class="project-btn">
+                Online Catering System
+                <span>➜</span>
+            </div>
+
+            <div class="project-content">
+
+                <p><strong>Academic Project • Android Application</strong></p>
+
+                <ul>
+                    <li>Developed Android-based catering ordering application.</li>
+
+                    <li>Designed menu browsing and order placement features.</li>
+
+                    <li>Built user-friendly UI and application workflow.</li>
+
+                    <li>Gained hands-on experience in mobile app development.</li>
+
+                    <li>Understood digital transformation in service businesses.</li>
+                </ul>
+
+                <div class="project-tags">
+                    <span>Android</span>
+                    <span>Java</span>
+                    <span>UI Design</span>
+                    <span>Mobile App</span>
+                </div>
+
+                <p style="margin-top:10px;font-size:13px;color:#777;">
+                    Developed as part of academic coursework.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 <!-- SKILLS -->
 <section id="skills"class="reveal">
@@ -1349,6 +1565,38 @@ window.addEventListener("scroll", () => {
         if (top < window.innerHeight - 100) {
             el.classList.add("active");
         }
+    });
+
+});
+</script>
+<script>
+document.querySelectorAll(".project-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const content = this.nextElementSibling;
+
+        const isOpen = content.style.maxHeight;
+
+        document.querySelectorAll(".project-content").forEach(c => {
+            c.style.maxHeight = null;
+            c.classList.remove("open");
+        });
+
+        document.querySelectorAll(".project-btn").forEach(b => {
+            b.classList.remove("active");
+        });
+
+        if (!isOpen) {
+
+            content.classList.add("open");
+
+            content.style.maxHeight =
+                content.scrollHeight + "px";
+
+            this.classList.add("active");
+        }
+
     });
 
 });
