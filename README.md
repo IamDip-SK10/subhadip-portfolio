@@ -39,13 +39,13 @@ Designed with a clean UI/UX approach focused on simplicity, accessibility, and p
 
 ---
 
-## 📬 Contact Section
-<img width="100%" src="contacts.jpg"/>
+## 💼 Experience Section
+<img width="100%" src="experience.jpg"/>
 
 ---
 
-## 📜 Certifications
-<img width="100%" src="certification.jpg"/>
+## 📬 Contact Section
+<img width="100%" src="contacts.jpg"/>
 
 ---
 
